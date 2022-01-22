@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset=utf-8>
+    <title>Game of Life</title>
+    <link rel="stylesheet" href="gameOfLife.css">
+    <script src="gameOfLife.js"></script>
+</head>
+<body>
+<span id="configContainer">
+    <span id="boardConfigSubContainer" class="configSubContainer">
+        <span>Board:</span>
+        <div>
+            <span>Width: </span><input id="boardWidthInput" type="text" value="100"/>
+        </div>
+        <div>
+            <span>Height: </span><input id="boardHeightInput" type="text" value="50"/>
+        </div>
+        <div>
+            <span>Cell Size: </span><input id="cellSizeInput" type="text" value="10"/>
+        </div>
+        <div>
+            <span>Cell Border: </span><input id="cellBorderInput" type="checkbox" checked/>
+        </div>
+        <div>
+            <span>Border Color: </span><input id="borderColorInput" type="color" value="#000000"/>
+        </div>
+        <div>
+            <span>Cell Color: </span><input id="cellColorInput" type="color" value="#006400"/>
+        </div>
+            <div>
+            <span>Background Color: </span><input id="backGroundColorInput" type="color" value="#ffffff"/>
+        </div>
+        <div>
+            <button onclick="createBoard()">Create</button>
+        </div>
+    </span>
+    <span id="boardFillConfigSubContainer" class="configSubContainer">
+        <span>Populate:</span>
+        <div>
+            <button onclick="fillBoardRandomly()">Randomly</button>
+        </div>
+    </span>
+    <span id="progressionConfigSubContainer" class="configSubContainer">
+        <span>Progression:</span>
+        <div>
+            <span>Generations/Second: </span><span id="generationsPerSecond">0</span>
+        </div>
+        <div>
+            <span>Max Generations/Second: </span><input id="generationsPerSecondInput" type="text" value="10"/>
+        </div>
+        <div>
+            <button onclick="playGame()">Play</button>
+            <button onclick="stop()">Stop</button>
+            <button onclick="nextGeneration()">Step</button>
+        </div>
+    </span>
+</span>
+<br>
+<span id="board" style="white-space: nowrap; display: inline-block; font-size: 0">
+</span>
+</body>
+</html>
